@@ -1,0 +1,11 @@
+node_id,node_type,name,domain
+DTC001,DTC,Battery Overvoltage Detected,Battery
+DTC002,DTC,Battery Undervoltage Detected,Battery
+DTC003,DTC,Battery Overcurrent Detected,Battery
+DTC004,DTC,Battery Overtemperature Detected,Battery
+DTC005,DTC,Battery Undertemperature Detected,Battery
+DTC006,DTC,SOC Below Warning Threshold,Battery
+DTC007,DTC,SOC Critical Level Reached,Battery
+DTC008,DTC,SOH Below Warning Threshold,Battery
+DTC009,DTC,SOH Critical Level Reached,Battery
+DTC010,DTC,Cell Voltage Imbalance Detected,Battery
