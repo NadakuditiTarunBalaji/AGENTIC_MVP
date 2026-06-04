@@ -1,0 +1,11 @@
+node_id,node_type,name,severity
+FAULT001,Fault,Battery Overvoltage Fault,High
+FAULT002,Fault,Battery Undervoltage Fault,High
+FAULT003,Fault,Battery Overcurrent Fault,High
+FAULT004,Fault,Battery Overtemperature Fault,High
+FAULT005,Fault,Battery Undertemperature Fault,Medium
+FAULT006,Fault,Low SOC Warning Fault,Medium
+FAULT007,Fault,Critical SOC Fault,High
+FAULT008,Fault,Battery SOH Degradation Fault,Medium
+FAULT009,Fault,Critical Battery SOH Fault,High
+FAULT010,Fault,Cell Voltage Imbalance Fault,High

@@ -1,0 +1,16 @@
+node_id,node_type,name,domain
+SIG001,Signal,Motor_Speed,Powertrain
+SIG002,Signal,Motor_Torque,Powertrain
+SIG003,Signal,Vehicle_Speed,Powertrain
+SIG004,Signal,Accelerator_Position,Powertrain
+SIG005,Signal,Regenerative_Brake_Level,Powertrain
+SIG006,Signal,Power_Output,Powertrain
+SIG007,Signal,Energy_Consumption,Powertrain
+SIG008,Signal,Drive_Mode,Powertrain
+SIG009,Signal,Charging_Status,Powertrain
+SIG010,Signal,Inverter_Temperature,Powertrain
+SIG011,Signal,Motor_Current,Powertrain
+SIG012,Signal,Motor_Voltage,Powertrain
+SIG013,Signal,Available_Range,Powertrain
+SIG014,Signal,Torque_Request,Powertrain
+SIG015,Signal,Powertrain_Fault_Status,Powertrain
