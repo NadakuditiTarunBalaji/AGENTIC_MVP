@@ -1,4 +1,76 @@
-
+ACIP-X1
+│
+├── PROJECT_ROADMAP.md
+│
+├── docs
+│ ├── architecture
+│ │ └── Vehicle_Program_Definition.xlsx
+│ │
+│ ├── requirements
+│ ├── design
+│ ├── diagrams
+│ └── presentations
+│
+├── data
+│ ├── raw
+│ │ ├── ECU_Master.xlsx
+│ │ ├── Signal_Master.xlsx
+│ │ ├── Calibration_Master.xlsx
+│ │ ├── DTC_Master.xlsx
+│ │ ├── Fault_Master.xlsx
+│ │ └── TestCase_Master.xlsx
+│ │
+│ ├── processed
+│ ├── synthetic
+│ └── exports
+│
+├── backend
+│ ├── api
+│ ├── services
+│ ├── models
+│ ├── repositories
+│ ├── utils
+│ └── config
+│
+├── frontend
+│
+├── agents
+│ ├── requirement_agent
+│ ├── calibration_agent
+│ ├── root_cause_agent
+│ ├── impact_analysis_agent
+│ ├── vehicle_health_agent
+│ ├── predictive_maintenance_agent
+│ ├── insurance_agent
+│ ├── digital_twin_agent
+│ └── orchestrator
+│
+├── database
+│ ├── schemas
+│ ├── migrations
+│ └── sqlite
+│
+├── knowledge_graph
+│ ├── nodes
+│ ├── edges
+│ ├── graph_builder
+│ └── graph_queries
+│
+├── hardware
+│ ├── stm32
+│ ├── can
+│ ├── obd
+│ └── sensors
+│
+├── testing
+│ ├── unit_tests
+│ ├── integration_tests
+│ ├── simulation_tests
+│ └── datasets
+│
+├── notebooks
+│
+└── deployment
 ## Project Overview
 
 ACIP-X1 (Automotive Cognitive Intelligence Platform) is an OEM-scale automotive intelligence platform that combines:
