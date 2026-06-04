@@ -6,7 +6,7 @@ __pycache__/
 *.pyo
 *.pyd
 *.pyc
-
+a.txt
 *.egg-info/
 dist/
 build/
