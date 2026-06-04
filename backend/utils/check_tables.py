@@ -1,13 +1,10 @@
-# backend/utils/check_tables.py
+from backend.config.database import SessionLocal
+from backend.models.requirement import Requirement
 
-from backend.config.database import engine
-from sqlalchemy import inspect
+db = SessionLocal()
 
-inspector = inspect(engine)
+count = db.query(Requirement).count()
 
-tables = inspector.get_table_names()
+print("Requirement Count =", count)
 
-print("\nTables Found:\n")
-
-for table in tables:
-    print(table)
+db.close()
