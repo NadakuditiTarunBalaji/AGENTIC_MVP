@@ -1,102 +1,101 @@
-# =========================
-# Python
-# =========================
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
+# # =========================
+# # Python
+# # =========================
+# __pycache__/
+# *.py[cod]
+# *.pyo
+# *.pyd
 *.pyc
-
-*.egg-info/
-dist/
-build/
+# a.txt
+# *.egg-info/
+# dist/
+# build/
 
 # Virtual environments
 venv/
 env/
 .venv/
 
-# =========================
-# Environment variables
-# =========================
+# # =========================
+# # Environment variables
+# # =========================
 .env
 .env.local
 .env.*.local
 
-# =========================
-# IDEs
-# =========================
+# # =========================
+# # IDEs
+# # =========================
 .vscode/
-.idea/
-*.swp
-*.swo
+# .idea/
+# *.swp
+# *.swo
 
-# =========================
-# Logs
-# =========================
-*.log
-logs/
+# # =========================
+# # Logs
+# # =========================
+# *.log
+# logs/
 
-# =========================
-# Database
-# =========================
-*.sqlite3
-*.db
+# # =========================
+# # Database
+# # =========================
+# *.sqlite3
+# *.db
 
-# =========================
-# Jupyter (if used later)
-# =========================
-.ipynb_checkpoints/
+# # =========================
+# # Jupyter (if used later)
+# # =========================
+# .ipynb_checkpoints/
 
-# =========================
-# Streamlit
-# =========================
-.streamlit/
+# # =========================
+# # Streamlit
+# # =========================
+# .streamlit/
 
-# =========================
-# OS files
-# =========================
-.DS_Store
-Thumbs.db
+# # =========================
+# # OS files
+# # =========================
+# .DS_Store
+# Thumbs.db
 
-# =========================
-# ML / AI artifacts
-# =========================
-models/
-*.pkl
-*.h5
-*.pt
-*.bin
+# # =========================
+# # ML / AI artifacts
+# # =========================
+# *.pkl
+# *.h5
+# *.pt
+# *.bin
 
-# Chroma / vector DB
-chroma/
-chromadb/
+# # Chroma / vector DB
+# chroma/
+# chromadb/
 
-# =========================
-# Cache / temp
-# =========================
-.cache/
-tmp/
-temp/
+# # =========================
+# # Cache / temp
+# # =========================
+# .cache/
+# tmp/
+# temp/
 
-# =========================
-# Coverage reports
-# =========================
-htmlcov/
-.coverage
+# # =========================
+# # Coverage reports
+# # =========================
+# htmlcov/
+# .coverage
 
-# =========================
-# Docker (if used later)
-# =========================
-docker-compose.override.yml
+# # =========================
+# # Docker (if used later)
+# # =========================
+# docker-compose.override.yml
 
-# =========================
-# Node (only if frontend expands later)
-# =========================
-node_modules/
+# # =========================
+# # Node (only if frontend expands later)
+# # =========================
+# node_modules/
 
-# =========================
-# Project specific
-# =========================
-datasets/raw/
-datasets/temp/
+# # =========================
+# # Project specific
+# # =========================
+# datasets/raw/
+# datasets/temp/

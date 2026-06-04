@@ -1,0 +1,1 @@
+ run this command python -m backend.utils.init_db 
