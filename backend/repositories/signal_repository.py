@@ -23,6 +23,8 @@ def create_signal(
     min_value: float,
     max_value: float,
     ecu_id: str
+
+    
 ):
     signal = Signal(
         signal_id=signal_id,
