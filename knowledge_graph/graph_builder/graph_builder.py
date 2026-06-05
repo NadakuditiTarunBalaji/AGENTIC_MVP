@@ -26,6 +26,7 @@ dtc_nodes = load_csv(nodes_path / "dtc_nodes.csv")
 fault_nodes = load_csv(nodes_path / "fault_nodes.csv")
 rootcause_nodes = load_csv(nodes_path / "rootcause_nodes.csv")
 agent_nodes = load_csv(nodes_path / "agent_nodes.csv")
+action_nodes = load_csv(nodes_path / "action_nodes.csv")
 
 
 vehicle_ecu_edges = load_csv(edges_path / "vehicle_ecu_edges.csv")
@@ -34,7 +35,7 @@ signal_dtc_edges = load_csv(edges_path / "signal_dtc_edges.csv")
 dtc_fault_edges = load_csv(edges_path / "dtc_fault_edges.csv")
 fault_rootcause_edges = load_csv(edges_path / "fault_rootcause_edges.csv")
 fault_agent_edges = load_csv(edges_path / "fault_agent_edges.csv")
-
+rootcause_action_edges = load_csv(edges_path / "rootcause_action_edges.csv")
 
 print("\n===== GRAPH SUMMARY =====")
 
@@ -45,6 +46,7 @@ datasets = [
     dtc_nodes,
     fault_nodes,
     rootcause_nodes,
+    action_nodes,
     agent_nodes,
 ]
 
@@ -58,9 +60,9 @@ edge_sets = [
     signal_dtc_edges,
     dtc_fault_edges,
     fault_rootcause_edges,
+    rootcause_action_edges,
     fault_agent_edges,
 ]
-
 total_edges = sum(len(df) for df in edge_sets if df is not None)
 
 print("Total Edges:", total_edges)

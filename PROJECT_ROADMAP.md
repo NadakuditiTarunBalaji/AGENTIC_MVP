@@ -1,10 +1,10 @@
 Day 1 - OEM Architecture ✅
 
-Day 2 - ECU Master
+Day 2 - ECU Master  ✅
 
-Day 3 - Signal Master
+Day 3 - Signal Master   ✅
 
-Day 4 - Calibration Master
+Day 4 - Calibration Master  ✅
 
 Day 5 - DTC Master
 
