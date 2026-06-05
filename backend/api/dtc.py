@@ -4,7 +4,9 @@ from sqlalchemy.orm import Session
 from backend.config.database import get_db
 from backend.services.dtc_service import (
     fetch_dtcs,
-    add_dtc
+    add_dtc,
+    update_dtc,
+    delete_dtc
 )
 router = APIRouter( 
     prefix="/api/dtcs",
@@ -27,4 +29,26 @@ def add_dtc_api(
         dtc_code,
         description,
         severity
+    )
+@router.put("/{dtc_code}")
+def update_dtc_api(
+    dtc_code: str,
+    description: str,
+    severity: str,
+    db: Session = Depends(get_db)
+):
+    return update_dtc(
+        db,
+        dtc_code,
+        description,
+        severity
+    )
+@router.delete("/{dtc_code}")
+def delete_dtc_api(
+    dtc_code: str,
+    db: Session = Depends(get_db)
+):
+    return delete_dtc(
+        db,
+        dtc_code
     )
