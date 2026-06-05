@@ -26,3 +26,16 @@ router = APIRouter(
 @router.get("/")
 def get_insurance(db: Session = Depends(get_db)):
     return fetch_insurance(db)
+@router.post("/")
+def add_insurance_claim(
+    claim_id: str,
+    status: str,
+    description: str,
+    db: Session = Depends(get_db)
+):
+    return create_insurance_claim(
+        db,
+        claim_id,
+        status,
+        description
+    )

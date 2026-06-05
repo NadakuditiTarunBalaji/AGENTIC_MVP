@@ -12,3 +12,16 @@ router = APIRouter(
 @router.get("/")
 def get_vehicle_data(db: Session = Depends(get_db)):
     return fetch_vehicle_data(db)
+@router.post("/")
+def add_vehicle(
+    vehicle_id: str,
+    model: str,
+    manufacturer: str,
+    db: Session = Depends(get_db)
+):
+    return create_vehicle(
+        db,
+        vehicle_id,
+        model,
+        manufacturer
+    )
