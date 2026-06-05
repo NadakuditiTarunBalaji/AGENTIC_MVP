@@ -1,4 +1,8 @@
-from backend.repositories.insurance_repository import get_all_insurance
+from sqlalchemy.orm import Session
 
-def fetch_insurance(db):
-    return get_all_insurance(db)
+from backend.repositories.insurance_repository import (
+    get_all_insurance_claims
+)
+
+def fetch_insurance(db: Session):
+    return get_all_insurance_claims(db)
