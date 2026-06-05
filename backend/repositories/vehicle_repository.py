@@ -15,7 +15,7 @@ def get_vehicle_data_by_id(db: Session, vehicle_id: int):
     )
 
 
-def create_vehicle_data(
+def create_vehicle(
     db: Session,
     rpm: float,
     battery_temp: float,
