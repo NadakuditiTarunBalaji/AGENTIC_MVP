@@ -9,6 +9,10 @@ from backend.api.dtc import router as dtcs_router
 from backend.api.vehicle_data import router as vehicle_data_router
 from backend.api.insurance_claim import router as insurance_router
 
+from backend.api.ai import router as ai_router
+
+
+
 app = FastAPI(
     title="ACIP-X1 - Automotive Cognitive Intelligence Platform"
 )
@@ -27,3 +31,6 @@ app.include_router(faults_router)
 app.include_router(dtcs_router)
 app.include_router(vehicle_data_router)
 app.include_router(insurance_router)
+
+
+app.include_router(ai_router)
