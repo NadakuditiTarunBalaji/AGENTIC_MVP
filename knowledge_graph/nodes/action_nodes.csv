@@ -1,0 +1,11 @@
+node_id,node_type,name,domain
+ACT001,Action,Inspect Cooling System,Battery
+ACT002,Action,Check Charging Circuit,Battery
+ACT003,Action,Run Thermal Diagnostics,Battery
+ACT004,Action,Perform Battery Health Check,Battery
+ACT005,Action,Inspect Battery Cells,Battery
+ACT006,Action,Verify Sensor Calibration,Battery
+ACT007,Action,Perform Cell Balancing,Battery
+ACT008,Action,Inspect Power Electronics,Battery
+ACT009,Action,Reduce Vehicle Load,Battery
+ACT010,Action,Schedule Battery Replacement,Battery
