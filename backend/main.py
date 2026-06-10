@@ -11,6 +11,8 @@ from backend.api.insurance_claim import router as insurance_router
 
 from backend.api.ai import router as ai_router
 
+from backend.api.dashboard import router as dashboard_router
+
 
 
 app = FastAPI(
@@ -34,3 +36,6 @@ app.include_router(insurance_router)
 
 
 app.include_router(ai_router)
+
+
+app.include_router(dashboard_router)
