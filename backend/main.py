@@ -13,7 +13,9 @@ from backend.api.ai import router as ai_router
 
 from backend.api.dashboard import router as dashboard_router
 
+from backend.api.can import router as can_router
 
+from backend.api.ws import router as ws_router
 
 app = FastAPI(
     title="ACIP-X1 - Automotive Cognitive Intelligence Platform"
@@ -39,3 +41,22 @@ app.include_router(ai_router)
 
 
 app.include_router(dashboard_router)
+
+
+
+app.include_router(can_router)
+
+
+app.include_router(ws_router)
+
+
+
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # for development only
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)

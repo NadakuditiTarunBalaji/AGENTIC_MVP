@@ -10,14 +10,10 @@ class CANFrame(Base):
     id = Column(Integer, primary_key=True, index=True)
 
     vehicle_id = Column(Integer, ForeignKey("vehicles.id"))
-
     can_id = Column(String)
-
     dlc = Column(Integer)
 
+    # JSON stored as string
     payload = Column(String)
 
-    timestamp = Column(
-        DateTime,
-        default=datetime.utcnow
-    )
+    timestamp = Column(DateTime, default=datetime.utcnow)
