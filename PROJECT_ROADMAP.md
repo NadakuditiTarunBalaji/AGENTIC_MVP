@@ -6,7 +6,7 @@ Day 3 - Signal Master   ✅
 
 Day 4 - Calibration Master  ✅
 
-Day 5 - DTC Master
+Day 5 - DTC Master   
 
 Day 6 - Fault Master
 
