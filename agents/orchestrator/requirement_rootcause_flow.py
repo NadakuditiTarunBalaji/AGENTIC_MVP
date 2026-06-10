@@ -1,5 +1,5 @@
 import json
-
+from agents.impact_analysis_agent.impact_analysis_agent import ImpactAnalysisAgent
 from agents.requirement_agent.requirement_parser import RequirementParser
 from agents.root_cause_agent.root_cause_agent import RootCauseAgent
 
@@ -9,6 +9,7 @@ class RequirementRootCauseFlow:
     def __init__(self):
         self.requirement_agent = RequirementParser()
         self.rootcause_agent = RootCauseAgent()
+        self.impact_agent = ImpactAnalysisAgent()
 
     def analyze(self, requirement):
 
@@ -18,9 +19,14 @@ class RequirementRootCauseFlow:
             requirement_result["fault"]
         )
 
+        impact_result = self.impact_agent.analyze_fault(
+            requirement_result["fault"]
+        )
+
         return {
             **requirement_result,
-            **rootcause_result
+            **rootcause_result,
+            **impact_result
         }
 
 
