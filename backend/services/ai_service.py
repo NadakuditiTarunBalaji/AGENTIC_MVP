@@ -31,3 +31,36 @@ def generate_recommendation(severity, root_cause):
         return "Inspect during next service."
 
     return "Monitor vehicle condition."
+
+
+def analyze_dtc(dtc_code):
+    dtc_database = {
+        "P0300": {
+            "description": "Random/Multiple Cylinder Misfire Detected",
+            "possible_causes": [
+                "Faulty spark plugs",
+                "Ignition coil issue",
+                "Fuel injector problem",
+                "Vacuum leak"
+            ],
+            "recommendation": "Inspect ignition system and fuel delivery components."
+        },
+        "P0171": {
+            "description": "System Too Lean (Bank 1)",
+            "possible_causes": [
+                "Vacuum leak",
+                "Dirty MAF sensor",
+                "Fuel pump issue"
+            ],
+            "recommendation": "Check air intake system and fuel pressure."
+        }
+    }
+
+    return dtc_database.get(
+        dtc_code.upper(),
+        {
+            "description": "Unknown DTC",
+            "possible_causes": ["No data available"],
+            "recommendation": "Refer to service manual."
+        }
+    )
