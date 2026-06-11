@@ -3,8 +3,12 @@ from sqlalchemy.orm import Session
 from pydantic import BaseModel
 
 from backend.config.database import get_db
-
-
+from backend.services.ecu_service import fetch_ecus
+from backend.repositories.ecu_repository import (
+    create_ecu,
+    update_ecu,
+    delete_ecu
+)
 
 router = APIRouter(
     prefix="/api/ecus",
@@ -35,8 +39,15 @@ def add_ecu(
         ecu.function
     )
 
-    
-from backend.services.ecu_service import fetch_ecus
+
+@router.get("/{ecu_id}")
+def get_ecu(
+    ecu_id: str,
+    db: Session = Depends(get_db)
+):
+    from backend.repositories.ecu_repository import get_ecu_by_id
+    return get_ecu_by_id(db, ecu_id)
+
 
 @router.put("/{ecu_id}")
 def edit_ecu(
@@ -50,12 +61,6 @@ def edit_ecu(
         ecu.ecu_name,
         ecu.function
     )
-
-from backend.repositories.ecu_repository import (
-    create_ecu,
-    update_ecu,
-    delete_ecu
-)
 
 
 @router.delete("/{ecu_id}")
