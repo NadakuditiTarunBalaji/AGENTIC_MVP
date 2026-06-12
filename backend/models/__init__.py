@@ -1,15 +1,21 @@
-from backend.config.database import Base
 
-from backend.models.vehicle import Vehicle
-from backend.models.vehicle_data import VehicleData
 
-from backend.models.vehicle_health import VehicleHealth
-from backend.models.can_frame import CANFrame
 
-from backend.models.insurance_policy import InsurancePolicy
-from backend.models.insurance_claim import InsuranceClaim
-
-from backend.models.agent_result import AgentResult
-from backend.models.digital_twin import DigitalTwin
-from backend.models.kg_node import KGNode
-from backend.models.kg_relation import KGRelation
+from .requirement import Requirement
+from .ecu import ECU
+from .signal import Signal
+from .calibration import Calibration
+from .dtc import DTC
+from .fault import Fault
+from .testcase import TestCase
+from .vehicle_data import VehicleData
+from .insurance_claim import InsuranceClaim
+from .insurance_policy import InsurancePolicy
+from .vehicle import Vehicle
+from .vehicle_health import VehicleHealth
+from .vehicle_telemetry import VehicleTelemetry
+from .digital_twin import DigitalTwin
+from .agent_result import AgentResult
+from .kg_node import KGNode
+from .kg_relation import KGRelation
+from .can_frame import CANFrame

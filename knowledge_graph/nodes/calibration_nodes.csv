@@ -1,0 +1,16 @@
+node_id,node_type,name,domain
+CAL001,Calibration,Battery_Overvoltage_Limit,Battery
+CAL002,Calibration,Battery_Undervoltage_Limit,Battery
+CAL003,Calibration,Battery_Overcurrent_Limit,Battery
+CAL004,Calibration,Battery_Overtemperature_Limit,Battery
+CAL005,Calibration,Battery_Undertemperature_Limit,Battery
+CAL006,Calibration,SOC_Warning_Threshold,Battery
+CAL007,Calibration,SOC_Critical_Threshold,Battery
+CAL008,Calibration,SOH_Warning_Threshold,Battery
+CAL009,Calibration,SOH_Critical_Threshold,Battery
+CAL010,Calibration,Cell_Imbalance_Threshold,Battery
+CAL011,Calibration,Motor_Speed_Max,Powertrain
+CAL012,Calibration,Motor_Torque_Max,Powertrain
+CAL013,Calibration,Vehicle_Speed_Max,Powertrain
+CAL014,Calibration,Inverter_Temperature_Max,Powertrain
+CAL015,Calibration,Regenerative_Brake_Max,Powertrain

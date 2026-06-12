@@ -1,19 +1,15 @@
-from sqlalchemy import Column, Integer, String, DateTime, ForeignKey
-from datetime import datetime
-
+from sqlalchemy import Column, String, Integer, Float, DateTime, Text
 from backend.config.database import Base
+from datetime import datetime
 
 
 class CANFrame(Base):
     __tablename__ = "can_frames"
 
-    id = Column(Integer, primary_key=True, index=True)
-
-    vehicle_id = Column(Integer, ForeignKey("vehicles.id"))
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    vehicle_id = Column(String)
     can_id = Column(String)
     dlc = Column(Integer)
-
-    # JSON stored as string
-    payload = Column(String)
-
+    raw_data = Column(String)
+    decoded_data = Column(Text)
     timestamp = Column(DateTime, default=datetime.utcnow)

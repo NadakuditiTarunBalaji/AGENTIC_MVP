@@ -1,18 +1,42 @@
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect
-from backend.config.websocket_manager import manager
+from typing import Dict, List
+import json
 
-router = APIRouter()
+router = APIRouter(tags=["WebSocket"])
+
+# Store active connections per vehicle
+active_connections: Dict[str, List[WebSocket]] = {}
 
 
 @router.websocket("/ws/vehicle/{vehicle_id}")
-async def vehicle_ws(websocket: WebSocket, vehicle_id: int):
+async def vehicle_websocket(websocket: WebSocket, vehicle_id: str):
+    await websocket.accept()
 
-    await manager.connect(websocket)
+    # Register connection
+    if vehicle_id not in active_connections:
+        active_connections[vehicle_id] = []
+    active_connections[vehicle_id].append(websocket)
 
     try:
         while True:
-            # keep connection alive
-            await websocket.receive_text()
+            # Wait for data from client
+            data = await websocket.receive_text()
+            message = json.loads(data)
+
+            # Broadcast to all connections for this vehicle
+            await broadcast(vehicle_id, message)
 
     except WebSocketDisconnect:
-        manager.disconnect(websocket)
+        active_connections[vehicle_id].remove(websocket)
+
+
+async def broadcast(vehicle_id: str, data: dict):
+    if vehicle_id in active_connections:
+        dead = []
+        for connection in active_connections[vehicle_id]:
+            try:
+                await connection.send_text(json.dumps(data))
+            except Exception:
+                dead.append(connection)
+        for d in dead:
+            active_connections[vehicle_id].remove(d)
