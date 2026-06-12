@@ -1,0 +1,16 @@
+node_id,node_type,name,category
+REQ001,Requirement,Battery voltage shall not exceed 420V,Safety
+REQ002,Requirement,Battery voltage shall not drop below 280V,Safety
+REQ003,Requirement,Battery current shall not exceed 300A,Safety
+REQ004,Requirement,Battery temperature shall not exceed 45 degrees C,Safety
+REQ005,Requirement,Battery temperature shall not drop below minus 20 degrees C,Safety
+REQ006,Requirement,SOC warning shall trigger below 20 percent,Functional
+REQ007,Requirement,SOC critical shall trigger below 10 percent,Functional
+REQ008,Requirement,SOH warning shall trigger below 80 percent,Functional
+REQ009,Requirement,SOH critical shall trigger below 60 percent,Functional
+REQ010,Requirement,Cell voltage imbalance shall not exceed 50mV,Safety
+REQ011,Requirement,Motor speed shall not exceed 12000 RPM,Safety
+REQ012,Requirement,Motor torque shall not exceed 350 Nm,Functional
+REQ013,Requirement,Vehicle speed shall not exceed 200 km/h,Safety
+REQ014,Requirement,Inverter temperature shall not exceed 85 degrees C,Safety
+REQ015,Requirement,Regenerative braking shall recover minimum 70 percent energy,Functional

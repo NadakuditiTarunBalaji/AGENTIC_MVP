@@ -14,3 +14,11 @@ SIG012,Signal,Motor_Voltage,Powertrain
 SIG013,Signal,Available_Range,Powertrain
 SIG014,Signal,Torque_Request,Powertrain
 SIG015,Signal,Powertrain_Fault_Status,Powertrain
+SIG016,Signal,Battery_Voltage,Battery
+SIG017,Signal,Battery_Current,Battery
+SIG018,Signal,Battery_Temperature,Battery
+SIG019,Signal,State_of_Charge,Battery
+SIG020,Signal,State_of_Health,Battery
+SIG021,Signal,Cell_Voltage_Min,Battery
+SIG022,Signal,Cell_Voltage_Max,Battery
+SIG023,Signal,Cell_Voltage_Imbalance,Battery
